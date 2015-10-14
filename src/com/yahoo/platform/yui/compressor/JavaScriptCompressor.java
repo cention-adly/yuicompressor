@@ -202,37 +202,22 @@ public class JavaScriptCompressor {
         reserved.add("while");
         reserved.add("with");
         // Words reserved for future use
-        reserved.add("abstract");
-        reserved.add("boolean");
-        reserved.add("byte");
-        reserved.add("char");
         reserved.add("class");
         reserved.add("const");
-        reserved.add("debugger");
-        reserved.add("double");
         reserved.add("enum");
         reserved.add("export");
         reserved.add("extends");
-        reserved.add("final");
-        reserved.add("float");
-        reserved.add("goto");
+		reserved.add("debugger");
         reserved.add("implements");
         reserved.add("import");
-        reserved.add("int");
         reserved.add("interface");
-        reserved.add("long");
-        reserved.add("native");
         reserved.add("package");
         reserved.add("private");
         reserved.add("protected");
         reserved.add("public");
-        reserved.add("short");
         reserved.add("static");
         reserved.add("super");
-        reserved.add("synchronized");
         reserved.add("throws");
-        reserved.add("transient");
-        reserved.add("volatile");
         // These are not reserved, but should be taken into account
         // in isValidIdentifier (See jslint source code)
         reserved.add("arguments");
@@ -243,6 +228,24 @@ public class JavaScriptCompressor {
         reserved.add("NaN");
         reserved.add("null");
         reserved.add("undefined");
+		// These are keywords reserved by older standards (ES3 and below)
+		// reserved.add("abstract");
+		// reserved.add("boolean");
+		// reserved.add("byte");
+		// reserved.add("char");
+		// reserved.add("double");
+		// reserved.add("final");
+		// reserved.add("float");
+		// reserved.add("goto");
+		// reserved.add("int");
+		// reserved.add("long");
+		// reserved.add("native");
+		// reserved.add("short");
+		// reserved.add("synchronized");
+		// reserved.add("transient");
+		// reserved.add("volatile");
+		// These are keywords reserved by ES5 for future use
+		reserved.add("await");
     }
 
     private static int countChar(String haystack, char needle) {
